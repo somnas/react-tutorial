@@ -1,14 +1,25 @@
+import React, {Component} from 'react';
 import './App.css';
 import Person from './Person/Person';
 
-function App() {
-  return (
-    <div className="app">
-      <Person name="Jens" age="12" />
-      <Person name="Kristoffer" age="24" />
-      <Person />
-    </div>
-  );
+class App extends Component {
+  state = {
+    persons: [
+      {name: 'Max', age: 28},
+      {name: 'Manu', age: 29},
+    ]
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
+        <Person name="Kristoffer" age="24">My Hobbies: Öl</Person>
+      </div>
+    );
+  }
 }
+
+
 
 export default App;
