@@ -11,11 +11,12 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="App">
         <Person age={this.state.persons[0].age} name={this.state.persons[0].name}>My hobby: Photography</Person>
         <br/>
-        <Person age={this.state.persons[1].age} name={this.state.persons[1].name} />
+        <Person age={this.state.persons[1].age} name={this.state.persons[1].name} />        
         <button>Switch Name</button>
       </div>
       );
